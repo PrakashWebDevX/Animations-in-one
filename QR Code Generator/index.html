@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>QR → Image (generate QR that opens an image)</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="wrapper new-ui">
+      <main class="container">
+        <header>
+          <h1>Generate QR that opens an image</h1>
+          <p>Choose an image and create a QR code that links to it (data-URL).</p>
+        </header>
+
+        <section class="form controls">
+          <label class="file-label">
+            <span>Select an image</span>
+            <input type="file" id="imageInput" accept="image/*" />
+          </label>
+
+          <div class="actions">
+            <button id="generateBtn">Generate QR</button>
+            <button id="downloadImgBtn" disabled>Download QR</button>
+          </div>
+
+          <p class="note">Large images are resized automatically. If the image is still too large you'll see a warning.</p>
+        </section>
+
+        <section class="preview-area">
+          <div class="preview">
+            <h2>Image preview</h2>
+            <div id="preview">No image selected</div>
+          </div>
+
+          <div class="qr-section">
+            <h2>QR code</h2>
+            <div id="qrcode">QR will appear here</div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
